@@ -1,0 +1,1362 @@
+{
+  "id": "5d51a561-6e0b-4f82-9f99-5f80855229fe",
+  "version": "2.0",
+  "name": "QA_project_Viktor_Hristov_62151",
+  "url": "https://www.emag.bg/",
+  "tests": [{
+    "id": "1d33ea90-351d-4c99-8466-8f6e90743fbd",
+    "name": "UserLoginFirstTimeTest",
+    "commands": [{
+      "id": "28304d5d-8c48-490e-b1cf-a9843417738f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c50e2c8-ae89-4917-b69f-d767ba6d2d87",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "461875c4-3946-469d-8e22-cf40a6c654e3",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dba2c525-90cc-430a-bd6e-16a3b65388c7",
+      "comment": "",
+      "command": "store",
+      "target": "test_project_qa@abv.bg",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "80ca156a-3e3f-4a64-a7cd-0367df687c12",
+      "comment": "",
+      "command": "store",
+      "target": "123456Qa",
+      "targets": [],
+      "value": "loginPassword"
+    }, {
+      "id": "fc57d711-5041-47e3-bd37-c1f73dd2f726",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=my_account",
+      "targets": [
+        ["id=my_account", "id"],
+        ["linkText=Моят акаунт", "linkText"],
+        ["css=#my_account", "css:finder"],
+        ["xpath=//a[@id='my_account']", "xpath:attributes"],
+        ["xpath=//nav[@id='masthead']/div/div/div[3]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/user/login')]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Моят акаунт ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d608e964-b796-477d-b14f-7b61de0207a1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.dropdown-footer > .btn-primary",
+      "targets": [
+        ["css=.dropdown-footer > .btn-primary", "css:finder"],
+        ["xpath=//a[contains(@href, '/user/login?ref=hdr_login_btn')]", "xpath:href"],
+        ["xpath=//div[12]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "faefb8a7-da5a-4f1e-891f-e3dca40c2c12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-footer > .btn-primary",
+      "targets": [
+        ["css=.dropdown-footer > .btn-primary", "css:finder"],
+        ["xpath=//a[contains(@href, '/user/login?ref=hdr_login_btn')]", "xpath:href"],
+        ["xpath=//div[9]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35515ea5-525a-41a4-83b9-6b71b652c778",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.gui-form-row:nth-child(2) .gui-label",
+      "targets": [],
+      "value": "Моля въведи имейл адрес"
+    }, {
+      "id": "65b463be-2767-4039-80b6-fccb6bd39e82",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=email",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aed8f8f4-567b-474e-8a90-31c486f53a9a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=username", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "2f0aefbc-b37c-475b-9905-8705e433b583",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gui-btn",
+      "targets": [
+        ["css=.gui-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Продължи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11cd4799-94d4-4008-b067-4342394b180e",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c5718d0-3fc6-4b3d-aa46-48914b0a0949",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${loginPassword}"
+    }, {
+      "id": "3632269c-daec-403e-ade7-e9c59a90e882",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gui-btn",
+      "targets": [
+        ["css=.gui-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Продължи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "284b21a3-6078-4f06-9d68-09eff842366a",
+    "name": "UserLoginSubsequentTimeTest",
+    "commands": [{
+      "id": "3f269dd3-476a-4410-8ab3-94e0e9f83fb4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b781d16d-dc27-4ee2-8dad-3f549f62a4a1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e1fbefa-d7f2-4c7d-93c1-410e4abd42ed",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a04c4afd-cac0-4b38-8205-c26d73cb984c",
+      "comment": "",
+      "command": "store",
+      "target": "123456Qa",
+      "targets": [],
+      "value": "loginPassword"
+    }, {
+      "id": "d446562e-702a-4c3e-bf28-f901fed283fc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=my_account",
+      "targets": [
+        ["id=my_account", "id"],
+        ["css=#my_account", "css:finder"],
+        ["xpath=//a[@id='my_account']", "xpath:attributes"],
+        ["xpath=//nav[@id='masthead']/div/div/div[3]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/user/account?ref=ua_personal_data')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55c2b53a-d6de-4800-8f0d-46d7f4eb9c8c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.dropdown-footer > .btn-primary",
+      "targets": [
+        ["css=.dropdown-footer > .btn-primary", "css:finder"],
+        ["xpath=//a[contains(@href, '/user/login?ref=hdr_login_btn')]", "xpath:href"],
+        ["xpath=//div[12]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "66b02e84-e6f7-402f-bf77-a54a527fe3e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-footer > .btn-primary",
+      "targets": [
+        ["css=.dropdown-footer > .btn-primary", "css:finder"],
+        ["xpath=//a[contains(@href, '/user/login?ref=hdr_login_btn')]", "xpath:href"],
+        ["xpath=//div[9]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b70c9fb-7dfe-4f41-a389-88402fdcaf6f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.gui-form-row:nth-child(3) .gui-label",
+      "targets": [
+        ["css=.gui-form-row:nth-child(3) .gui-label", "css:finder"],
+        ["xpath=//div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Въведи паролата от акаунта си в eMAG')]", "xpath:innerText"]
+      ],
+      "value": "Въведи паролата от акаунта си в eMAG"
+    }, {
+      "id": "24cb4df6-ca66-4674-9edc-16ad872c6153",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b018d5-9c14-4f4a-915f-6ac820c5803b",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${loginPassword}"
+    }, {
+      "id": "4dfee148-2567-48f5-b536-529cc181f2d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gui-btn",
+      "targets": [
+        ["css=.gui-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Продължи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6f89bac0-dbc7-4758-aabf-e567aa93bcd0",
+    "name": "AddingToCartWithoutViewingInfoTest",
+    "commands": [{
+      "id": "e8cfa686-3173-409b-8547-f9c6156502e1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d9e2217-e197-48c1-b3ef-448477b14e52",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3883fa16-a7b9-483d-abc5-c9ea32f9cf61",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40ee1030-4b2d-4e4a-b85d-c738c715bd87",
+      "comment": "",
+      "command": "store",
+      "target": "Компютри & Периферия",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "10087261-a445-4060-9ee2-9d977b1206a0",
+      "comment": "",
+      "command": "store",
+      "target": "LCD & LED Монитори",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "a7b439c7-1698-4b8c-a3e5-5fc76d8cfc20",
+      "comment": "",
+      "command": "store",
+      "target": "Монитор Gaming LED Acer Predator 24\", ZeroFrame, Full HD, HDMI, Display Port, 180 Hz (DP), 1 ms, G-SYNC, Говорители, Черен, XB241H",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "51dba087-bb2f-4c15-af0d-4efd9d23973c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6008eed1-555d-4a11-a2d6-dd53fa2f25c1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Компютри & Периферия", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Компютри & Периферия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1987a75e-12c2-447d-b9b4-ab0d90aa3606",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac6cbe35-b4b3-46ec-9df1-9aa0266fc120",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-item:nth-child(1) form > .btn",
+      "targets": [
+        ["css=.card-item:nth-child(1) form > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='card_grid']/div/div/div/div[3]/div[3]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добави в количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60598431-9b0a-48d8-8de9-7b6f1181fbd7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=виж количката",
+      "targets": [
+        ["linkText=виж количката", "linkText"],
+        ["css=.table-cell > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'виж количката')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cart/products?ref=add-to-cart-module_go-to-cart_button')]", "xpath:href"],
+        ["xpath=//div[6]/div/div/div[2]/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb5e582b-42d7-4836-89cd-313548ff7e8e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=${productName}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6a318835-2e90-47c8-8978-f883cb800dfc",
+    "name": "FilterByMainCategoryTest",
+    "commands": [{
+      "id": "55150f5d-737f-4cd0-9c98-7019523cc21e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b980534-5d16-49ca-bb02-798b7cd68970",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26b511cb-16ab-4129-84cd-c0bfacf02805",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33c1bb83-89e0-43e0-b05a-8b5e547ade22",
+      "comment": "",
+      "command": "store",
+      "target": "Компютри & Периферия",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "c46411d8-0750-47cd-ad6f-3fcdf0f48024",
+      "comment": "",
+      "command": "store",
+      "target": "PC компоненти",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "97515472-5471-4141-a6cb-11f816955d9b",
+      "comment": "",
+      "command": "store",
+      "target": "Видео карти",
+      "targets": [],
+      "value": "filter"
+    }, {
+      "id": "f7cc7235-4494-4698-af51-12b11b9782d3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db687365-557f-48c9-b206-b0a9fe016cea",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Компютри & Периферия", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Компютри & Периферия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d2cde04-016b-41f4-853a-f099002f75de",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f358fee-d660-4888-afde-02f09218030e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.page-title",
+      "targets": [
+        ["css=.page-title", "css:finder"],
+        ["xpath=//div[@id='emg-body-overlay']/div[3]/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": "${category}"
+    }, {
+      "id": "76ebd1df-0de8-4fbe-9133-aa6383915e02",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${filter}",
+      "targets": [
+        ["linkText=Видео карти", "linkText"],
+        ["css=.emg-aside-links > li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Видео карти')]", "xpath:link"],
+        ["xpath=//div[@id='emg-body-overlay']/div/div/div[3]/aside/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/video-karti/c?tree_ref=0&ref=cat_tree_37')]", "xpath:href"],
+        ["xpath=//aside/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Видео карти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3e987b0-09d6-459a-954f-a22d0438de03",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.title-phrasing-xl",
+      "targets": [],
+      "value": "${filter}"
+    }]
+  }, {
+    "id": "1940012e-ec9c-4a47-82b3-0109d959ddd8",
+    "name": "FilterBySubcategoryTest",
+    "commands": [{
+      "id": "7d1a7524-f1ff-49d9-ab69-2538d8eec79f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ef922d1-d36c-4d33-8d8b-85ffaf109560",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b88e17e-e583-441e-a5d1-d9c22ade97e9",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3551d20-380f-49c5-91b4-0066704b174b",
+      "comment": "",
+      "command": "store",
+      "target": "Компютри & Периферия",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "4bdb46a8-699b-4679-955d-c3a7ed9408cb",
+      "comment": "",
+      "command": "store",
+      "target": "Настолни компютри",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "9ceda049-d9ba-4b96-a838-8b556492f918",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "215197cf-ee41-480c-a9bc-b232286869d8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Компютри & Периферия", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Компютри & Периферия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ba713d9-f668-4f60-af6e-81422b019c37",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b6be233-6d12-44ee-b0e3-fa73b53ae10f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.title-phrasing-xl",
+      "targets": [],
+      "value": "${category}"
+    }]
+  }, {
+    "id": "47831151-7cf9-480b-9fb2-93a1fc968b63",
+    "name": "AddingToCartAfterViewingInfoTest",
+    "commands": [{
+      "id": "f7c27a2f-c3cf-4f99-bb11-3e800c747702",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94749fb2-a87c-4118-9490-89b98ac1f4e5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ece75484-b6f2-47d0-a119-66a91002ac0b",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc32f08c-4812-4259-8802-18839e141eda",
+      "comment": "",
+      "command": "store",
+      "target": "Компютри & Периферия",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "86bc2ffd-1ac7-473b-8045-1c9fffb5d010",
+      "comment": "",
+      "command": "store",
+      "target": "Настолни компютри",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "2755d381-8f6a-4027-a0f8-a02daf6c173c",
+      "comment": "",
+      "command": "store",
+      "target": "Desktop PC Office TX0223, Intel® Core™ Processor I3 - 3.30GHz, 4GB DDR3, 500GB Hard Disck, DVD-RW, Tastatura + Mouse CADOU",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "aa19c79b-8a74-49df-90fd-8d0dbebc8b0f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fee01d8-e40c-476b-bf1d-6b299e70afa6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Компютри & Периферия", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Компютри & Периферия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b27c0e63-400c-4cf3-8aea-066452647815",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea2cb604-66d7-48c7-ba27-672d885c4de4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${productName}",
+      "targets": [
+        ["css=#card_grid > .card-item:nth-child(1) .lozad", "css:finder"],
+        ["xpath=//img[@alt='Настолен компютър APPLE iMac, 21.5\", Intel® Core™ i3, RAM 8GB, HDD 1TB, AMD Radeon™ Pro 555X 2GB, macOS Mojave, Intl. kbd']", "xpath:img"],
+        ["xpath=//div[@id='card_grid']/div/div[2]/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90a2e21b-1ccb-487d-8c64-8d04f0c28795",
+      "comment": "",
+      "command": "click",
+      "target": "css=.yeahIWantThisProduct:nth-child(1)",
+      "targets": [
+        ["css=.yeahIWantThisProduct:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='page-skin']/div[2]/div/div[2]/div[2]/div/div/div[2]/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95743d54-fbc8-4840-9711-3ab0f9345c0b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=виж количката",
+      "targets": [
+        ["linkText=виж количката", "linkText"],
+        ["css=.hidden-sm > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'виж количката')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/cart/products?ref=add-to-cart-module_go-to-cart_button')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ae976e3-db67-462f-9f46-d9cf8b886116",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=${productName}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6fe6a125-eb6c-42ef-ab44-1928c8ad19b3",
+    "name": "AddingToCartLoopTest",
+    "commands": [{
+      "id": "b83f4002-e168-48c3-9c8a-20d823229f65",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af6b732c-b25b-4e90-9305-8906d47630f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0999906b-537f-42e2-b07b-1d412134b61c",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "528a8410-143a-442a-bfde-997e3b741afc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "iterationCounter"
+    }, {
+      "id": "86bf6789-2d61-433b-a4ca-1fcd920d5823",
+      "comment": "",
+      "command": "store",
+      "target": "Компютри & Периферия",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "492ab03e-2e05-48a6-8c76-f0605695cb80",
+      "comment": "",
+      "command": "store",
+      "target": "Процесори",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "660d6174-1000-422f-9775-ac49ffde9374",
+      "comment": "",
+      "command": "store",
+      "target": "Процесор Intel® Core™ Coffee Lake i3-9100F, 3.60GHz, 6MB, Без графична карта Socket 1151",
+      "targets": [],
+      "value": "productName"
+    }, {
+      "id": "d36d3ac5-ead6-4c02-be61-0893e5235338",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd44e6dc-666f-43b2-b7eb-1877ff8b66d7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Компютри & Периферия", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[2]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Компютри & Периферия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce8c8c88-d80d-4bbe-81d8-ce0586b2ed52",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "069889f2-3fce-4ee8-9154-3c968bb7cde0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${productName}",
+      "targets": [
+        ["linkText=Процесор AMD Ryzen 5 2600, 3.9GHz, 19MB Socket AM4, Wraith Stealth cooler", "linkText"],
+        ["css=.card-item:nth-child(2) .card-section-wrapper .product-title", "css:finder"],
+        ["xpath=//a[contains(text(),'Процесор AMD Ryzen 5 2600, 3.9GHz, 19MB Socket AM4, Wraith Stealth cooler')]", "xpath:link"],
+        ["xpath=//div[@id='card_grid']/div[2]/div/div/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.emag.bg/procesor-amd-ryzen-5-2600-3-9ghz-19mb-socket-am4-wraith-stealth-cooler-yd2600bbafbox/pd/D707JFBBM/')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Процесор AMD Ryzen 5 2600, 3.9GHz, 19MB Socket AM4, Wraith Stealth cooler')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a4d47c7-c7c9-4d39-8d41-824e82f22ae2",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d35dbbf-102a-4aec-812d-3874f4aa49cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.yeahIWantThisProduct:nth-child(1)",
+      "targets": [
+        ["css=.yeahIWantThisProduct:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='page-skin']/div[2]/div/div[2]/div[2]/div/div/div[2]/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fad660f7-a0c3-4264-b375-0e1a4e88e3be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.gtm_6046yfqs > .em",
+      "targets": [
+        ["css=.gtm_6046yfqs > .em", "css:finder"],
+        ["xpath=//div[12]/div/div/div/button/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52fd9373-a2e5-4e2a-b367-8c66d76dbcc7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterationCounter}+1",
+      "targets": [],
+      "value": "iterationCounter"
+    }, {
+      "id": "1e4603a2-7df4-4ade-b25e-282678ba0651",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${iterationCounter} < 5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "226ab0c9-8575-4762-a4bb-cf82b3393758",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=my_cart",
+      "targets": [
+        ["id=my_cart", "id"],
+        ["css=#my_cart", "css:finder"],
+        ["xpath=//a[@id='my_cart']", "xpath:attributes"],
+        ["xpath=//nav[@id='masthead']/div/div/div[3]/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/cart/products?ref=cart')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1cf660a-14be-4622-9a7d-fcb0a4e27dd1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Виж количката",
+      "targets": [
+        ["linkText=Виж количката", "linkText"],
+        ["css=.ph-dropdown-inner > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Виж количката')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/cart/products?ref=cart')])[2]", "xpath:href"],
+        ["xpath=//div[14]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4da90f2e-cdf7-4b00-ae41-d8ca872be910",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=${productName}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "eb0792c8-a6ff-4c3e-a45e-c4eb8cf6386e",
+    "name": "FilterByAvailabilityTest",
+    "commands": [{
+      "id": "f2b6ac8f-384f-4198-bccf-1358ac4eff08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d5bc88-9815-4344-aee2-53a7fa60c9fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03481188-016a-4102-9dd3-20b0f867d172",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a3140c5-4a9b-4138-8165-9f09008b8c71",
+      "comment": "",
+      "command": "store",
+      "target": "Големи електроуреди",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "9ec1e1b2-7e91-4c60-8288-63dc4fb84247",
+      "comment": "",
+      "command": "store",
+      "target": "Хладилници",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "029a5f9d-3b2e-4364-8bc0-73f02e4891e3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a10b3965-704d-4972-b708-2562b239e550",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Големи електроуреди", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[4]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Големи електроуреди')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e3862c-929d-4b60-874d-e5249074bab6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7feb7b0b-2302-4ada-8b39-fe234e1adc3f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='js-filter-6408-collapse']/div/a",
+      "targets": [
+        ["linkText=В наличност (308)", "linkText"],
+        ["css=.filter-body > .active", "css:finder"],
+        ["xpath=//div[@id='js-filter-6408-collapse']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.emag.bg/hladilnici/c?ref=lst_leftbar_6408_stock')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'В наличност (308)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be89f011-41f3-4629-96fa-2f3b323ae01e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.title-phrasing-xl",
+      "targets": [
+        ["css=.title-phrasing-xl", "css:finder"],
+        ["xpath=//div[@id='page-skin']/div[2]/div/div[3]/div[2]/div[2]/div/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": "${category}"
+    }, {
+      "id": "10e868e3-0f4b-42ac-8e19-a847a07eab3f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var x=document.querySelector('span.title-phrasing.title-phrasing-sm').innerText.replace(/\\D/g, ''); return x;",
+      "targets": [],
+      "value": "filterCount"
+    }, {
+      "id": "00534301-1090-44ce-8c82-50883cf65bd8",
+      "comment": "",
+      "command": "executeScript",
+      "target": " var x=document.querySelector('span.text-muted').innerText.replace(/\\D/g, ''); return x;",
+      "targets": [],
+      "value": "productCount"
+    }, {
+      "id": "3982aa54-e4b0-4f68-a6ca-a9476d3026a8",
+      "comment": "",
+      "command": "echo",
+      "target": "Products listed in filter: ${filterCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed01aa1c-edc2-4ac1-a490-08bf0001bbdc",
+      "comment": "",
+      "command": "echo",
+      "target": "Actual products:  ${productCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "509d91bb-0a77-4631-99eb-952bf4434311",
+      "comment": "",
+      "command": "if",
+      "target": "${filterCount} == ${productCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74a6f865-d94a-45f4-83dc-7317531c073b",
+      "comment": "",
+      "command": "echo",
+      "target": "The filter works correctly.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28106e0b-1762-4f97-9a1e-10b97aca5683",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb1ba353-eeaf-4c24-beea-2e38cec6866c",
+      "comment": "",
+      "command": "echo",
+      "target": "The filter works incorrectly.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c8a8048-c520-430e-ac88-1c215c3e4e00",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "69fbc702-2dc3-4960-87e7-c8097a573f96",
+    "name": "CartTotalPriceCalculationTest",
+    "commands": [{
+      "id": "9bd7e160-2fdd-4091-9ef5-3342c06d6bea",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.emag.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59834a4e-445f-48c9-9eb9-f17b22ca8f0d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f54f90d-8e93-4cdb-b797-88f135444689",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dd26aeb-2c37-486b-9f1c-cfc2c70dc00f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=my_cart",
+      "targets": [
+        ["id=my_cart", "id"],
+        ["css=#my_cart", "css:finder"],
+        ["xpath=//a[@id='my_cart']", "xpath:attributes"],
+        ["xpath=//nav[@id='masthead']/div/div/div[3]/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/cart/products?ref=cart')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84710fc5-1c8e-46f6-b121-d08b26bd3fc7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Виж количката",
+      "targets": [
+        ["linkText=Виж количката", "linkText"],
+        ["css=.ph-dropdown-inner > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Виж количката')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/cart/products?ref=cart')])[2]", "xpath:href"],
+        ["xpath=//div[14]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6802fe38-68f5-4ce8-aa30-eda3be2baeb7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var x=document.querySelector('p.price.order-summary-total-price').innerText.replace(/\\D/g, ''); return  parseInt(x)*0.01;",
+      "targets": [],
+      "value": "totalPrice"
+    }, {
+      "id": "4562ce9c-0022-4a6b-bb8e-fe45ac6c036a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var elements =  document.getElementsByClassName(\"price-main\"); var total = 0; for(var i=0; i<elements.length; i++)   {     \ttotal += parseInt(elements[i].innerText.replace(/\\D/g, ''));  }    var total=total/100;   return total;",
+      "targets": [],
+      "value": "sumOfProductsPrice"
+    }, {
+      "id": "b3df035e-81ac-4e47-9698-90f56b32ec20",
+      "comment": "",
+      "command": "echo",
+      "target": "Total price: ${totalPrice}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a519ac6a-52b4-4f12-a723-b8c7714e1e5a",
+      "comment": "",
+      "command": "echo",
+      "target": "Sum of all prices: ${sumOfProductsPrice}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cb8ff34-6b12-46a7-9ad3-7f016194f13d",
+      "comment": "",
+      "command": "if",
+      "target": "${totalPrice} == ${sumOfProductsPrice}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86eaa091-9f68-4a82-9b95-5e29179a9e9a",
+      "comment": "",
+      "command": "echo",
+      "target": "The total price has been calculated correctly.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b682ef6-779c-4e12-bfa2-c5cdc69c43a0",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fa0f66c-a98a-4b60-a771-9d285c489862",
+      "comment": "",
+      "command": "echo",
+      "target": "The total price is incorrect.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cef3e9e5-4294-4332-b41c-bd579bdece9c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0da70745-bc37-428d-bded-f3b9c55617fb",
+    "name": "FilterByPriceTest",
+    "commands": [{
+      "id": "e151b1fb-deab-491b-bb94-1641b260c7e5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e2640a9-a45f-4f41-905a-990012df868f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d264a9f0-6a18-4874-9169-f8dcf69cd5e9",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Към началото",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "189ebb4f-7bd9-4a07-bedf-7a29a593cb4a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 0",
+      "targets": [],
+      "value": "iterationCounter"
+    }, {
+      "id": "ed3c5164-57e9-468c-a7b4-768c97bca790",
+      "comment": "",
+      "command": "store",
+      "target": "Големи електроуреди",
+      "targets": [],
+      "value": "productType"
+    }, {
+      "id": "6699e3c5-b936-4a80-bcfe-67d26da96022",
+      "comment": "",
+      "command": "store",
+      "target": "Хладилни витрини",
+      "targets": [],
+      "value": "category"
+    }, {
+      "id": "e6ce001f-f62d-485f-8b31-f4dbe6d399e4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar-aux-content__departments",
+      "targets": [
+        ["css=.navbar-aux-content__departments", "css:finder"],
+        ["xpath=//nav[@id='auxiliary']/div/div/ul/li/div", "xpath:idRelative"],
+        ["xpath=//nav[2]/div/div/ul/li/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a802453b-a2d9-4ca8-a5e9-c310a52eb156",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=${productType}",
+      "targets": [
+        ["linkText=Големи електроуреди", "linkText"],
+        ["css=.megamenu-active > .js-megamenu-list-department-link", "css:finder"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0)')])[4]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Големи електроуреди')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8646dcbc-5055-4736-aa2f-332ca80009bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${category}",
+      "targets": [
+        ["linkText=Настолни компютри & Монитори", "linkText"],
+        ["css=.megamenu-column:nth-child(1) > .megamenu-item-first-relative", "css:finder"],
+        ["xpath=//a[contains(text(),'Настолни компютри & Монитори')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/nastolni-kompjutri-monitori/sd?ref=hp_menu_quick-nav_21_0&type=subdepartment')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настолни компютри & Монитори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5e150cc-2278-49c4-8b1b-55881d8832fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=#js-filter-6412-collapse .js-filter-item:nth-child(4)",
+      "targets": [
+        ["linkText=1.500 - 2.000 (4)", "linkText"],
+        ["css=#js-filter-6412-collapse .js-filter-item:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='js-filter-6412-collapse']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.emag.bg/hladilni-vitrini/price,between-1500-and-2000/c?ref=lst_leftbar_6412_1500-2000')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'1.500 - 2.000 (4)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79fee88a-2d08-4ab7-bb94-24abea7eac76",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var text=document.querySelector('a.js-filter-item.filter-item.active').innerText.replace(/\\./g, '');;   var dash = text.indexOf(\"-\");  var number=text.substring(0, dash);  return parseInt(number);",
+      "targets": [],
+      "value": "lowerLimit"
+    }, {
+      "id": "6e70ca2e-5705-44f1-b27b-4ccfbda38429",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var text=document.querySelector('a.js-filter-item.filter-item.active').innerText.replace(/\\./g, '');   var dash = text.indexOf(\"-\");  var number=text.substring(dash+1, text.length-3); return  parseInt(number);",
+      "targets": [],
+      "value": "upperLimit"
+    }, {
+      "id": "46ec2814-f7ad-446a-9beb-32af328db887",
+      "comment": "",
+      "command": "echo",
+      "target": "The lower limit of the price range is: ${lowerLimit}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82b13307-7400-40fc-8f8a-c16980951ccf",
+      "comment": "",
+      "command": "echo",
+      "target": "The upper limit of the price range is: ${upperLimit}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6325ec4e-e3c2-471a-ba3c-39a58c809b71",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var elements =  document.getElementsByClassName(\"product-new-price\");  for(var i=0; i<elements.length; i++)    {     \tvar number = parseInt(elements[i].innerText.replace(/\\D/g, ''))/100; \t \tif ((number <  ${lowerLimit}) || (number >  ${upperLimit})) \t{ \t\treturn \"The filter works incorrectly.\"; \t} }   return \"The filter works correctly.\";",
+      "targets": [],
+      "value": "endResult"
+    }, {
+      "id": "343811d8-e98a-4fbd-aec8-348a6de3a6be",
+      "comment": "",
+      "command": "echo",
+      "target": "${endResult}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "61a5bb2d-fa7b-4e8f-8cc8-5d96e29f361d",
+    "name": "LoginSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1d33ea90-351d-4c99-8466-8f6e90743fbd", "284b21a3-6078-4f06-9d68-09eff842366a"]
+  }, {
+    "id": "f1f8d97c-89ab-456a-a53f-155fee364f56",
+    "name": "CartSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["47831151-7cf9-480b-9fb2-93a1fc968b63", "6f89bac0-dbc7-4758-aabf-e567aa93bcd0", "6fe6a125-eb6c-42ef-ab44-1928c8ad19b3", "69fbc702-2dc3-4960-87e7-c8097a573f96"]
+  }, {
+    "id": "2f8bf289-8f33-44e6-9173-974ba63be278",
+    "name": "FilterSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6a318835-2e90-47c8-8978-f883cb800dfc", "1940012e-ec9c-4a47-82b3-0109d959ddd8", "eb0792c8-a6ff-4c3e-a45e-c4eb8cf6386e", "0da70745-bc37-428d-bded-f3b9c55617fb"]
+  }],
+  "urls": ["https://www.emag.bg/", "https://www.emag.bg/homepage", "https://www.emag.bg/homepage?ref=emag_CMP-24293_crazy-days-07-10-01-2020"],
+  "plugins": []
+}

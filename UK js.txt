@@ -1,0 +1,47 @@
+//CartTotalPriceCalculationTest - Get total price from cart
+var x=document.querySelector('p.price.order-summary-total-price').innerText.replace(/\D/g, ''); 
+return  parseInt(x)*0.01;
+
+//CartTotalPriceCalculationTest - Get sum of prices from cart
+var elements =  document.getElementsByClassName("price-main"); 
+var total = 0; 
+for(var i=0; i<elements.length; i++)   
+	{     	
+		total += parseInt(elements[i].innerText.replace(/\D/g, ''));  
+	}    
+	
+var total=total/100;  
+ 
+return total;
+
+//FilterByAvailabilityTest - Get filter product count
+var x=document.querySelector('span.title-phrasing.title-phrasing-sm').innerText.replace(/\D/g, ''); 
+return x;
+
+//FilterByAvailabilityTest - Get title product count
+var x=document.querySelector('span.text-muted').innerText.replace(/\D/g, ''); 
+return x;
+
+//FilterByPriceTest - Get marked price ranges
+var text=document.querySelector('a.js-filter-item.filter-item.active').innerText.replace(/\./g, '');  
+var dash = text.indexOf("-"); 
+var number=text.substring(0, dash); 
+return parseInt(number);
+
+var text=document.querySelector('a.js-filter-item.filter-item.active').innerText.replace(/\./g, '');  
+var dash = text.indexOf("-"); 
+var number=text.substring(dash+1, text.length-3);
+return  parseInt(number);
+
+//FilterByPriceTest - Test if prices are within the boundaries
+var elements =  document.getElementsByClassName("product-new-price"); 
+for(var i=0; i<elements.length; i++)   
+{    
+	var number = parseInt(elements[i].innerText.replace(/\D/g, ''))/100;
+	
+	if ((number <  ${lowerLimit}) || (number >  ${upperLimit}))
+	{
+		return "The filter works incorrectly.";
+	}
+}  
+return "The filter works correctly.";

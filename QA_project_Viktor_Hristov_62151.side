@@ -234,9 +234,9 @@
       "id": "5b70c9fb-7dfe-4f41-a389-88402fdcaf6f",
       "comment": "",
       "command": "assertText",
-      "target": "css=.gui-form-row:nth-child(3) .gui-label",
+      "target": "css=.step2 .gui-label",
       "targets": [
-        ["css=.gui-form-row:nth-child(3) .gui-label", "css:finder"],
+        ["css=.step2 .gui-label", "css:finder"],
         ["xpath=//div[2]/div/label", "xpath:position"],
         ["xpath=//label[contains(.,'Въведи паролата от акаунта си в eMAG')]", "xpath:innerText"]
       ],
@@ -990,6 +990,17 @@
       ],
       "value": ""
     }, {
+      "id": "be89f011-41f3-4629-96fa-2f3b323ae01e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.title-phrasing-xl",
+      "targets": [
+        ["css=.title-phrasing-xl", "css:finder"],
+        ["xpath=//div[@id='page-skin']/div[2]/div/div[3]/div[2]/div[2]/div/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": "${category}"
+    }, {
       "id": "7feb7b0b-2302-4ada-8b39-fe234e1adc3f",
       "comment": "",
       "command": "click",
@@ -1003,17 +1014,6 @@
         ["xpath=//a[contains(.,'В наличност (308)')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "be89f011-41f3-4629-96fa-2f3b323ae01e",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.title-phrasing-xl",
-      "targets": [
-        ["css=.title-phrasing-xl", "css:finder"],
-        ["xpath=//div[@id='page-skin']/div[2]/div/div[3]/div[2]/div[2]/div/h1/span", "xpath:idRelative"],
-        ["xpath=//h1/span", "xpath:position"]
-      ],
-      "value": "${category}"
     }, {
       "id": "10e868e3-0f4b-42ac-8e19-a847a07eab3f",
       "comment": "",
@@ -1085,7 +1085,7 @@
       "id": "9bd7e160-2fdd-4091-9ef5-3342c06d6bea",
       "comment": "",
       "command": "open",
-      "target": "https://www.emag.bg/",
+      "target": "/",
       "targets": [],
       "value": ""
     }, {
@@ -1128,6 +1128,19 @@
         ["xpath=(//a[contains(@href, '/cart/products?ref=cart')])[2]", "xpath:href"],
         ["xpath=//div[14]/div/a", "xpath:position"],
         ["xpath=//a[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8a9c750-0827-42c6-9794-634ff8cc2084",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=empty-cart",
+      "targets": [
+        ["id=empty-cart", "id"],
+        ["css=#empty-cart", "css:finder"],
+        ["xpath=//div[@id='empty-cart']", "xpath:attributes"],
+        ["xpath=//div[@id='cartProductsPage']/div", "xpath:idRelative"],
+        ["xpath=//body/div[3]/div/div/div", "xpath:position"]
       ],
       "value": ""
     }, {
@@ -1218,13 +1231,6 @@
       "target": "linkText=Към началото",
       "targets": [],
       "value": ""
-    }, {
-      "id": "189ebb4f-7bd9-4a07-bedf-7a29a593cb4a",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return 0",
-      "targets": [],
-      "value": "iterationCounter"
     }, {
       "id": "ed3c5164-57e9-468c-a7b4-768c97bca790",
       "comment": "",
